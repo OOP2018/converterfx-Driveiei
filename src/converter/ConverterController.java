@@ -30,8 +30,6 @@ public class ConverterController {
 	 */
 	@FXML
 	public void initialize() {
-		// This is for testing
-		System.out.println("Running initialize");
 		if (combobox1 != null) {
 			combobox1.getItems().addAll(Length.values());
 			combobox1.getSelectionModel().select(0); // select an item to show
