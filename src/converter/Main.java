@@ -6,8 +6,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 
-
+/**
+ * The Main class is the class to start the application or ready to begin running.
+ * 
+ * @author Kornphon Noiprasert
+ * */
 public class Main extends Application {
+	
+	/**
+	 * The start method is called after the init method has returned,
+	 * and after the system is ready for the application to begin running.
+	 * @param primaryStage is the stage for this application which the application scene can be set.
+	 */
 	@Override
 	public void start(Stage stage) {
 		try {
@@ -21,6 +31,11 @@ public class Main extends Application {
 		}
 	}
 	
+	/**
+	 * Configure and start the application.
+	 * 
+	 * @param args not used
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

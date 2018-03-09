@@ -1,7 +1,5 @@
 package converter;
 
-import com.sun.prism.paint.Color;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
@@ -9,6 +7,8 @@ import javafx.scene.control.TextField;
 
 /**
  * UI Controller for events and initializing compomnents.
+ * 
+ * @author Kornphon Noiprasert
  */
 public class ConverterController {
 	@FXML
@@ -19,7 +19,6 @@ public class ConverterController {
 	ComboBox<Length> combobox1;
 	@FXML
 	ComboBox<Length> combobox2;
-	
 
 	/**
 	 * JavaFX calls the initialize() method of your controller when it creates the
@@ -50,7 +49,7 @@ public class ConverterController {
 		try {
 			if (textfield2.getText().isEmpty()) {
 				input = Double.parseDouble(textfield1.getText().trim());
-				input = (input/unit2.getUnit())*unit1.getUnit();
+				input = (input / unit2.getUnit()) * unit1.getUnit();
 				textfield2.setText(String.format("%.4f", input));
 			}
 		} catch (NumberFormatException ex) {
@@ -59,7 +58,7 @@ public class ConverterController {
 		try {
 			if (textfield1.getText().isEmpty()) {
 				input = Double.parseDouble(textfield2.getText().trim());
-				input = (input/unit1.getUnit())*unit2.getUnit();
+				input = (input / unit1.getUnit()) * unit2.getUnit();
 				textfield1.setText(String.format("%.4f", input));
 			}
 		} catch (NumberFormatException ex) {
@@ -67,6 +66,9 @@ public class ConverterController {
 		}
 	}
 
+	/**
+	 * Clear all text for ready to used.
+	 * */
 	public void handleClear() {
 		textfield1.clear();
 		textfield2.clear();
