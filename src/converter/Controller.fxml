@@ -8,13 +8,12 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="converter.ConverterController">
    <top>
-      <FlowPane hgap="8.0" prefHeight="91.0" prefWidth="873.0" BorderPane.alignment="CENTER">
+      <FlowPane hgap="8.0" prefHeight="114.0" prefWidth="796.0" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="textfield1" onAction="#handleConvert" prefHeight="32.0" prefWidth="155.0" />
             <ComboBox fx:id="combobox1" prefHeight="31.0" prefWidth="136.0" />
             <TextField fx:id="textfield2" onAction="#handleConvert" />
             <ComboBox fx:id="combobox2" prefHeight="31.0" prefWidth="126.0" />
-            <Label text=" Kilometer " />
             <Button mnemonicParsing="false" onAction="#handleConvert" text="Convert" />
             <Button mnemonicParsing="false" onAction="#handleClear" text="Clear" />
          </children>
